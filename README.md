@@ -1,4 +1,4 @@
-# Motion Intelligence Performance Lab v5.0
+# Motion Intelligence Performance 
 
 An advanced fitness intelligence system that acts as a professional sports scientist, performance analyst, and personal running coach combined.
 
