@@ -5,7 +5,7 @@ An advanced fitness intelligence system that acts as a professional sports scien
 ## 🔗 Live Demo
 [View Live Application](https://ais-dev-dg7ogjc2s3px5g6s6dqxrr-47418378330.asia-east1.run.app)
 
-## 🚀 Features
+## Features
 
 - **AI Workout Analysis**: Deep biomechanical reasoning using Gemini AI.
 - **Granular Telemetry**: Track distance, time, pace, heart rate, cadence, and RPE.
@@ -13,7 +13,7 @@ An advanced fitness intelligence system that acts as a professional sports scien
 - **Immersive UI**: High-octane, sporty dashboard with real-time visualizations.
 - **Injury Risk Assessment**: Intelligent risk scoring based on workload and recovery.
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```mermaid
 graph TD
@@ -45,7 +45,7 @@ graph TD
 - `src/index.css`: Global styles, Tailwind CSS configuration, and the "Immersive UI" theme.
 - `metadata.json`: Application metadata and permissions.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework**: React 19 + Vite
 - **Styling**: Tailwind CSS v4
