@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+:root {
+    --bg: #050608;
+    --surface: #0f1115;
+    --surface-accent: #16191f;
+    --accent-cyan: #00f2ff;
+    --accent-green: #00ff8c;
+    --accent-red: #ff4d4d;
+    --text-primary: #f0f2f5;
+    --text-secondary: #8e96a3;
+    --border: rgba(255, 255, 255, 0.08);
+    --radius: 0.5rem;
+}
+
+@theme inline {
+    --font-heading: "Inter", sans-serif;
+    --font-sans: "Inter", sans-serif;
+    --font-mono: "JetBrains Mono", monospace;
+    
+    --color-background: var(--bg);
+    --color-foreground: var(--text-primary);
+    
+    --color-card: var(--surface);
+    --color-card-foreground: var(--text-primary);
+    
+    --color-primary: var(--accent-cyan);
+    --color-primary-foreground: var(--bg);
+    
+    --color-secondary: var(--surface-accent);
+    --color-secondary-foreground: var(--text-primary);
+    
+    --color-muted: var(--surface-accent);
+    --color-muted-foreground: var(--text-secondary);
+    
+    --color-accent: var(--accent-cyan);
+    --color-accent-foreground: var(--bg);
+    
+    --color-destructive: var(--accent-red);
+    --color-destructive-foreground: var(--text-primary);
+    
+    --color-border: var(--border);
+    --color-input: var(--surface-accent);
+    --color-ring: var(--accent-cyan);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground font-sans antialiased overflow-x-hidden;
+    }
+}
+
+.athlete-card {
+    @apply p-5 bg-[var(--surface-accent)] rounded-xl border-l-4 border-[var(--accent-cyan)];
+}
+
+.stat-box {
+    @apply p-5 bg-[var(--surface)] rounded-xl border border-[var(--border)] text-center;
+}
+
+.viz-container {
+    @apply h-[200px] border border-dashed border-[var(--border)] relative flex items-end gap-2 p-5 rounded-xl;
+}
+
+.viz-bar {
+    @apply flex-1 bg-gradient-to-t from-[var(--accent-cyan)] to-transparent opacity-60 rounded-t-[2px];
+}
+
+.risk-meter {
+    @apply h-[120px] w-[120px] flex flex-col items-center justify-center bg-[radial-gradient(circle_at_center,rgba(255,77,77,0.1),transparent)] rounded-full border border-[var(--border)] mx-auto;
+}
+
+.day-row {
+    @apply flex justify-between px-3 py-2 bg-[var(--surface-accent)] rounded-md text-xs;
+}
+
+.day-row.active {
+    @apply border border-[var(--accent-green)];
+}
+
+.label-mono {
+    @apply font-mono text-[10px] text-[var(--text-secondary)] uppercase tracking-[1.5px] mb-2 block;
+}
+
+.bullet-list {
+    @apply list-none text-[13px] leading-relaxed text-[var(--text-secondary)] space-y-2;
+}
+
+.bullet-list li {
+    @apply relative pl-4;
+}
+
+.bullet-list li::before {
+    content: '>';
+    @apply absolute left-0 text-[var(--accent-cyan)] font-mono;
+}
+
+.weakness-list li::before {
+    @apply text-[var(--accent-red)];
+}
+
